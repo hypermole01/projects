@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style3.css">
+  <title>Expense Tracker</title>
+</head>
+<body>
+  <script src="script.js"></script>
+  <div class="container">
+    <h1>Personal Finance</h1>
+    <div class="section">
+      <h2>Income</h2>
+      <div class="input-group">
+        <label for="incomeDescription">Description</label>
+        <input type="text" id="incomeDescription" placeholder="e.g., Salary">
+      </div>
+      <div class="input-group">
+        <label for="incomeAmount">Amount</label>
+        <input type="number" id="incomeAmount" placeholder="e.g., 100000">
+      </div>
+      <div class="button-group">
+        <button id="addIncomeButton">Add Income</button>
+      </div>
+    </div>
+    <div class="section">
+      <h2>Expenses</h2>
+      <div class="input-group">
+        <label for="expenseDescription">Description</label>
+        <input type="text" id="expenseDescription" placeholder="e.g., Travel">
+    </div>
+    <div class="input-group">
+      <label for="expenseCategory">Category</label>
+      <select id="expenseCategory">
+        <option value="food">Food</option>
+        <option value="rent">Rent</option>
+        <option value="travel">Travel</option>
+        <option value="bill">Electricity Bill</option>
+        <option value="entertainment">Entertainment</option>
+      </select>
+    </div>
+    <div class="input-group">
+      <label for="expenseAmount">Amount</label>
+      <input type="number" id="expenseAmount" placeholder="e.g., 100000">
+    </div>
+    <div class="button-group">
+      <button id="addExpenseButton">Add Expense</button>
+    </div>
+  </div>
+  <div class="table-container">
+    <h2>Transaction History</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Description</th>
+          <th>Category</th>
+          <th>Amount</th>
+          <th>Type</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="transactionHistory"></tbody>
+    </table>
+  </div>
+  <div class="summary">
+    <h2>Budget Summary</h2>
+    <p>Total Income: <output id="totalIncome">0</output></p>
+    <p>Total Expenses: <output id="totalExpenses">0</output></p>
+    <p>Balance: <output id="balance">0</output></p>
+  </div>
+  <div class="clear-button-group">
+    <button id="clearAllButton">Clear All</button>
+  </div>
+</div>
+</body>
+</html>
+
